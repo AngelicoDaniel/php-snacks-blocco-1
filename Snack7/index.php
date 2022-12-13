@@ -29,22 +29,24 @@ $studenti = [
     
 ];
 
-function media($voti) {
-    $somma = 0;
 
-    for ($i=0; $i < count($voti); $i++) { 
-        $somma += $voti[$i];
-    }
 
-    $media = $somma / count($voti);
 
-    return $media;
-};
 
 
 for ($i=0; $i < count($studenti); $i++) { 
+
+    
+    for ($x=0; $x < count($studenti[$i]['voti']); $x++) { 
+        $somma += $voti[$x];
+    }
+    $somma = 0;
+    
+    $media = $somma / count($voti);
+
+
     echo '<br>';
-    echo $studenti[$i]['nome'] . ' ' . $studenti[$i]['cognome'] ;
-}
+    echo $studenti[$i]['nome'] . ' ' . $studenti[$i]['cognome'] . ' ' . $media;
+};
 
 ?>
