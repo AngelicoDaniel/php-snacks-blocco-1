@@ -26,8 +26,21 @@ $studenti = [
         'voti' => [6, 6, 9, 2, 4]
     ],
 
-
+    
 ];
+
+function media($voti) {
+    $somma = 0;
+
+    for ($i=0; $i < count($voti); $i++) { 
+        $somma += $voti[$i];
+    }
+
+    $media = $somma / count($voti);
+
+    return $media;
+};
+
 
 for ($i=0; $i < count($studenti); $i++) { 
     echo '<br>';
